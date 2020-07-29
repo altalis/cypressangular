@@ -1,0 +1,39 @@
+<div class="panel panel--bordered panel--loose">
+  <div class="row">
+    <div class="col-12">
+        <div class="form-group input--icon">
+            <div class="form-group__text">
+                <input type="text" [(ngModel)]="params.email" required>
+                <label>User</label>
+                <button type="button" class="link" tabindex="-1">
+                    <span class="icon-contact"></span>
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group input--icon">
+            <div class="form-group__text">
+                <input type="password" [(ngModel)]="params.password">
+                <label>Password</label>
+                <button type="button" class="link" tabindex="-1">
+                    <span class="icon-lock"></span>
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- <div class="col-6">
+        <button class="btn btn--danger">Logout</button>
+      </div> -->
+
+      <div class="col-6">
+        <button class="btn btn--success" (click)="submitLogin()">Login</button>
+      </div>
+    </div>
+</div>
