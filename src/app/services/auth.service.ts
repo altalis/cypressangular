@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const BASE_URL_AUTH: string = 'localhost:3000/api/auth';
+const BASE_URL_AUTH: string = 'http://localhost:3000/api/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +14,9 @@ export class AuthService {
 
   login(params) {
     return this.http.post(`${BASE_URL_AUTH}/login`, params);
+  }
+
+  logout(params) {
+    return this.http.post(`${BASE_URL_AUTH}/logout`, params);
   }
 }

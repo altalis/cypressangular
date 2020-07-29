@@ -1,4 +1,4 @@
 exports.VALIDUSER = {
-  email: 'cypress',
+  email: 'cypress@test.com',
   password: 'admin123'
 };

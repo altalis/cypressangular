@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
   }
 
   if(email ===  dbData.email && password === dbData.password) {
-    respondSuccess(res, {status: true, message: `Success: User ${email} login!`});
+    respondSuccess(res, {status: true, message: `User ${email} login!`});
   }
 
   respondUnauthorized(res, 'Email and/or password are incorrect.');
@@ -37,12 +37,12 @@ router.post('/login', async (req, res) => {
 router.post('/logout', async (req, res) => {
   let email = req.body.email;
 
-  if(email === '' || email === '' || typeof email === 'undefined' ){
+  if(email === '' || email === '' || typeof email === 'undefined' ) {
     respondBadRequest(res, 'No email in the request');
     return;
   }
 
-  respondSuccess(res, {status: true, message: `Success: user ${email} logout!`});
+  respondSuccess(res, {status: true, message: `User ${email} logout!`});
 
 });
 

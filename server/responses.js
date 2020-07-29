@@ -33,19 +33,22 @@ exports.respondSuccess = respondSuccess;
  * @param message
  */
 function respondServerError(res, message) {
-  respond(res, 500, wrapError(message));
+  respond(res, 500, message);
+  // respond(res, 500, wrapError(message));
 }
 
 exports.respondServerError = respondServerError;
 
 function respondUnauthorized(res, message) {
-  respond(res, 401, wrapError(message || `User need to auth first.`))
+  respond(res, 401, message);
+  // respond(res, 401, wrapError(message || `User need to auth first.`))
 }
 
 exports.respondUnauthorized = respondUnauthorized;
 
 function respondForbidden(res, message) {
-  respond(res, 403, wrapError(message || `User doesn't have rights to execute this process.`))
+  respond(res, 403, message);
+  // respond(res, 403, wrapError(message || `User doesn't have rights to execute this process.`))
 }
 
 exports.respondForbidden = respondForbidden;
@@ -57,7 +60,8 @@ exports.respondForbidden = respondForbidden;
  * @param {string} [message] Message to sent back
  */
 function respondNotFound(res, message) {
-  respond(res, 404, wrapError(message || `Requested object not found.`));
+  respond(res, 404, message);
+  // respond(res, 404, wrapError(message || `Requested object not found.`));
 }
 
 exports.respondNotFound = respondNotFound;
@@ -70,7 +74,8 @@ exports.respondNotFound = respondNotFound;
  * @returns {void}
  */
 function respondBadRequest(res, message) {
-  respond(res, 400, wrapError(message || `Bad request.`));
+  respond(res, 400, message);
+  // respond(res, 400, wrapError(message || `Bad request.`));
 }
 
 exports.respondBadRequest = respondBadRequest;

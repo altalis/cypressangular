@@ -1,6 +1,7 @@
 # Cypressangular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+First start the server and application using the commands below. Then run the end-to-end command below. Once the cypress interface is open, select the wanted test
+(this case folder new-test / sample.spec.js).
 
 ## Development frontend
 
@@ -21,11 +22,6 @@ npm run server
 Run to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
 ```bash
 npm run e2e
-``` 
-
-Remember to run the server (backend)
-```bash
-npm run server
 ``` 
 
 ## Further help
